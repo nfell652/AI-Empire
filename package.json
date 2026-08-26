@@ -1,0 +1,25 @@
+{
+  "name": "romeo-ai-empire-independent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Independent Namecheap-ready AI Empire runtime. No Abacus hosting/runtime dependency.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check lib/store.js && node --check lib/security.js && node --check lib/provider.js && node --check lib/render.js",
+    "create-owner": "node scripts/create-owner.js"
+  },
+  "engines": {"node": ">=20"},
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "stripe": "^17.5.0"
+  }
+}
